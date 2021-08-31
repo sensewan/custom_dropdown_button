@@ -6,6 +6,7 @@ enum MyDropDownMenu{ DEFAULT, MENU1, MENU2 }
 extension MyDropDownMenuExtension on MyDropDownMenu{
   // get 방식으로 사용하기
   String get getName{
+    //      ↱ on으로 받은 MyDropDownMenu를 의미
     switch(this){
       case MyDropDownMenu.DEFAULT:
         return "기본메뉴";
