@@ -45,7 +45,12 @@ class MyPopupMenuButtonWidget extends GetView<DropdownButtonController> {
           padding: const EdgeInsets.all(15),
           child: Row(
             children: [
-              Text("${controller.currentItem.value.getName} (팝업)"),
+              Expanded(
+                child: Text(
+                  "${controller.currentItem.value.getName}(팝업)",
+                  style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold),
+                ),
+              ),
               Icon(Icons.arrow_drop_down)
             ],
           ),

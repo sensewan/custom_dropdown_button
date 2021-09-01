@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 enum MyDropDownMenu{ DEFAULT, MENU1, MENU2 }
@@ -23,6 +24,7 @@ extension MyDropDownMenuExtension on MyDropDownMenu{
 class DropdownButtonController extends GetxController{
 
   Rx<MyDropDownMenu> currentItem = MyDropDownMenu.DEFAULT.obs;
+  final dropKey = GlobalKey();
 
   void changeDropDownMenu(int? itemIndex){
     var selectedItem = MyDropDownMenu.values.where((menu) => menu.index == itemIndex).first;

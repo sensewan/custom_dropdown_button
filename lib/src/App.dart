@@ -1,3 +1,4 @@
+import 'package:custom_dropdown_button/src/components/CustomDropDownButton.dart';
 import 'package:custom_dropdown_button/src/components/MyDropdownButtonWidget.dart';
 import 'package:custom_dropdown_button/src/components/MyPopupMenuButtonWidget.dart';
 import 'package:custom_dropdown_button/src/controller/DropdownButtonController.dart';
@@ -28,10 +29,12 @@ class App extends GetView<DropdownButtonController> {
         children: [
           Row(
             children: [
+              //                                   ↱ key를 통해 위치를 알 수 있음 ''
+              Expanded(child: CustomDropDownButton(key: controller.dropKey,)),
+              myVerticalDivider(),
               Expanded(child: MyDropdownButtonWidget()),
               myVerticalDivider(),
               Expanded(child: MyPopupMenuButtonWidget()),
-              myVerticalDivider(),
             ],
           ),
           Expanded(

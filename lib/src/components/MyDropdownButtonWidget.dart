@@ -18,7 +18,8 @@ class MyDropdownButtonWidget extends GetView<DropdownButtonController> {
             // ↱ 각 드랍버튼 메뉴의 고유 key 값이라고 생각하면 됨..
             value: menu.index,
             child: Text(
-              "${menu.getName} (기본형)"
+              "${menu.getName}(기본형)",
+              style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
             ),
           ),
         ).toList(),
