@@ -32,4 +32,20 @@ class DropdownButtonController extends GetxController{
     currentItem(selectedItem);
   }
 
+
+  // custom 드랍버튼 아랫부분 위치 알아내기
+  double get dropdownPositionY{
+    //                       ↱ key에 해당하는 위젯을 갖고옴
+    var box = dropKey.currentContext!.findRenderObject();
+
+    //                                    ↱ null로 주면 좌표 구해짐?
+    var translation = box!.getTransformTo(null).getTranslation();
+
+    //                       ↱이동시킴
+    return box.paintBounds.shift(Offset(translation.x, translation.y)).bottomCenter.dy;
+    
+  }
+
 }
+
+

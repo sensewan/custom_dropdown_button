@@ -88,7 +88,8 @@ class DropDownList extends GetView<DropdownButtonController> {
 
             Positioned(
               left: 0,
-              top: 120,
+              //   ↱정확한 위젯의 위치 알기
+              top: controller.dropdownPositionY,
               child: ClipRRect(
                 borderRadius: BorderRadius.only(
                   bottomRight: Radius.circular(10),
